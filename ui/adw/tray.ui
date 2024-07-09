@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <object class="AdwPreferencesPage" id="tray">
+    <property name="name">tray</property>
+    <property name="title" translatable="yes">Tray</property>
+    <property name="icon-name">applications-utilities-symbolic</property>
+
+    <child>
+      <object class="AdwPreferencesGroup" id="tray_group">
+        <property name="title" translatable="yes">IBus Version: v1.5.29</property>
+
+        <child>
+          <object class="AdwActionRow" id="start_restart_row">
+            <property name="title" translatable="yes">Start / Restart IBus</property>
+            <child>
+              <object class="GtkButton" id="start_restart_button">
+                <property name="label" translatable="yes">Start / Restart IBus</property>
+              </object>
+            </child>
+          </object>
+        </child>
+
+        <child>
+          <object class="AdwSwitchRow" id="show_tray_icon">
+            <property name="title" translatable="yes">Show IBus tray icon</property>
+            <property name="active">false</property>
+          </object>
+        </child>
+
+         <child>
+          <object class="AdwComboRow" id="directly_switch_source_row">
+            <property name="title" translatable="yes">Directly switch source with click</property>
+            <property name="model">
+              <object class="GtkStringList">
+                <items>
+                  <item translatable="yes">Disable</item>
+                  <item translatable="yes">Left</item>
+                  <item translatable="yes">Right</item>
+                </items>
+              </object>
+            </property>
+            <property name="selected">0</property>
+          </object>
+        </child>
+
+        <child>
+          <object class="AdwPreferencesGroup" id="additional_menu_entries_group">
+            <property name="title" translatable="yes">Add Additional Menu Entries</property>
+
+            <child>
+              <object class="AdwSwitchRow" id="menu-ibus-emoji">
+                <property name="title" translatable="yes">Copying Emoji</property>
+                <property name="active">false</property>
+              </object>
+            </child>
+
+            <child>
+              <object class="AdwSwitchRow" id="menu-extension-preference">
+                <property name="title" translatable="yes">This Extension's Preferences</property>
+                <property name="active">false</property>
+              </object>
+            </child>
+
+            <child>
+              <object class="AdwSwitchRow" id="menu-ibus-preference">
+                <property name="title" translatable="yes">IBus Preferences</property>
+                <property name="active">false</property>
+              </object>
+            </child>
+
+            <child>
+              <object class="AdwSwitchRow" id="menu-ibus-version">
+                <property name="title" translatable="yes">IBus Version</property>
+                <property name="active">false</property>
+              </object>
+            </child>
+
+            <child>
+              <object class="AdwSwitchRow" id="menu-ibus-restart">
+                <property name="title" translatable="yes">Restarting IBus</property>
+                <property name="active">false</property>
+              </object>
+            </child>
+
+            <child>
+              <object class="AdwSwitchRow" id="menu-ibus-exit">
+                <property name="title" translatable="yes">Exiting IBus</property>
+                <property name="active">false</property>
+              </object>
+            </child>
+
+          </object>
+        </child>
+
+      </object>
+    </child>
+    
+  </object>
+</interface>

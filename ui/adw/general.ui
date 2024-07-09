@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <object class="AdwPreferencesPage" id="general">
+    <property name="name">general</property>
+    <property name="title" translatable="yes">General</property>
+    <property name="icon-name">applications-utilities-symbolic</property>
+
+    <child>
+      <object class="AdwPreferencesGroup" id="general_group">
+        <property name="title" translatable="yes">General Settings</property>
+
+        <!-- Candidates Orientation -->
+        <child>
+          <object class="AdwComboRow" id="candidate_orientation_row">
+            <property name="title" translatable="yes">Candidates Orientation</property>
+            <property name="subtitle" translatable="yes">Choose the orientation of candidates</property>
+            <property name="model">
+              <object class="GtkStringList">
+                <items>
+                  <item translatable="yes">Disable</item>
+                  <item translatable="yes">Vertical</item>
+                  <item translatable="yes">Horizontal</item>
+                </items>
+              </object>
+            </property>
+            <property name="selected">0</property>
+          </object>
+        </child>
+
+        <!-- Candidates Popup Animation -->
+        <child>
+          <object class="AdwComboRow" id="candidate_popup_animation_row">
+            <property name="title" translatable="yes">Candidates Popup Animation</property>
+            <property name="subtitle" translatable="yes">Select the animation style for candidates popup</property>
+            <property name="model">
+              <object class="GtkStringList">
+                <items>
+                  <item translatable="yes">Disable</item>
+                  <item translatable="yes">None</item>
+                  <item translatable="yes">Slide</item>
+                  <item translatable="yes">Fade</item>
+                  <item translatable="yes">All</item>
+                </items>
+              </object>
+            </property>
+            <property name="selected">0</property>
+          </object>
+        </child>
+
+        <!-- Candidate Box Right Click -->
+        <child>
+          <object class="AdwComboRow" id="candidate_box_right_click_func_row">
+            <property name="title" translatable="yes">Candidate Box Right Click</property>
+            <property name="subtitle" translatable="yes">Choose action for right click on candidate box</property>
+            <property name="model">
+              <object class="GtkStringList">
+                <items>
+                  <item translatable="yes">Open Menu</item>
+                  <item translatable="yes">Switch Source</item>
+                </items>
+              </object>
+            </property>
+            <property name="selected">0</property>
+          </object>
+        </child>
+
+        <!-- Candidates Scroll -->
+        <child>
+          <object class="AdwComboRow" id="candidate_scroll_mode_row">
+            <property name="title" translatable="yes">Candidates Scroll</property>
+            <property name="subtitle" translatable="yes">Select action for candidates scroll</property>
+            <property name="model">
+              <object class="GtkStringList">
+                <items>
+                  <item translatable="yes">Change Page</item>
+                  <item translatable="yes">Change Candidate</item>
+                </items>
+              </object>
+            </property>
+            <property name="selected">0</property>
+          </object>
+        </child>
+
+        <!-- Fix Candidate Box -->
+        <child>
+          <object class="AdwComboRow" id="remember_candidate_position_row">
+            <property name="title" translatable="yes">Fix Candidate Box</property>
+            <property name="subtitle" translatable="yes">Fix candidate box position</property>
+            <property name="model">
+              <object class="GtkStringList">
+                <items>
+                  <item translatable="yes">Remember Last Position</item>
+                  <item translatable="yes">Don't Remember Position</item>
+                </items>
+              </object>
+            </property>
+            <property name="selected">0</property>
+          </object>
+        </child>
+
+        <!-- Candidate Box Position -->
+        <child>
+          <object class="AdwComboRow" id="candidate_box_position_row">
+            <property name="title" translatable="yes">Candidate Box Position</property>
+            <property name="subtitle" translatable="yes">Select candidate box position</property>
+            <property name="model">
+              <object class="GtkStringList">
+                <items>
+                  <item translatable="yes">Center</item>
+                  <item translatable="yes">Center-Left</item>
+                  <item translatable="yes">Top-Left</item>
+                  <item translatable="yes">Top-Center</item>
+                  <item translatable="yes">Top-Right</item>
+                  <item translatable="yes">Center-Right</item>
+                  <item translatable="yes">Bottom-Right</item>
+                  <item translatable="yes">Bottom-Center</item>
+                  <item translatable="yes">Bottom-Left</item>
+                </items>
+              </object>
+            </property>
+            <property name="selected">0</property>
+          </object>
+        </child>
+
+         <!-- Use custom font -->
+        <child>
+          <object class="AdwPreferencesRow" id="use_custom_font_row">
+            <child>
+              <object class="GtkBox" id="container_box_custom_font">
+                <property name="orientation">horizontal</property>
+                <property name="spacing">10</property>
+                <child>
+                  <object class="GtkLabel">
+                    <property name="label" translatable="yes">Use custom font</property>
+                    <property name="halign">start</property>
+                    <property name="hexpand">false</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkFontButton" id="custom_font_button">
+                    <property name="hexpand">true</property>
+                    <property name="font">Sans Regular 16</property>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+
+        <!-- Auto Switch ASCII Mode -->
+        <child>
+          <object class="AdwComboRow" id="ascii_mode_row">
+            <property name="title" translatable="yes">Auto Switch ASCII Mode</property>
+            <property name="subtitle" translatable="yes">Enable or disable auto switch to ASCII mode</property>
+            <property name="model">
+              <object class="GtkStringList">
+                <items>
+                  <item translatable="yes">On</item>
+                  <item translatable="yes">Off</item>
+                  <item translatable="yes">Keep</item>
+                </items>
+              </object>
+            </property>
+            <property name="selected">0</property>
+          </object>
+        </child>
+
+        <!-- Candidate Box Opacity -->
+        <child>
+          <object class="AdwActionRow" id="candidate_opacity_row">
+            <property name="title" translatable="yes">Candidate Box Opacity</property>
+            <child type="end">
+              <object class="GtkScale" id="candidate_box_opacity_scale">
+                <property name="orientation">horizontal</property>
+                <property name="adjustment">
+                  <object class="GtkAdjustment">
+                    <property name="lower">0</property>
+                    <property name="upper">255</property>
+                    <property name="value">255</property>
+                    <property name="step-increment">1</property>
+                  </object>
+                </property>
+              </object>
+            </child>
+          </object>
+        </child>
+
+        <!-- Fix IME List Order -->
+        <child>
+          <object class="AdwComboRow" id="fix_ime_list_row">
+            <property name="title" translatable="yes">Fix IME List Order</property>
+            <property name="subtitle" translatable="yes">Enable or disable fix IME list order</property>
+            <property name="model">
+              <object class="GtkStringList">
+                <items>
+                  <item translatable="yes">On</item>
+                  <item translatable="yes">Off</item>
+                  <item translatable="yes">Keep</item>
+                </items>
+              </object>
+            </property>
+            <property name="selected">0</property>
+          </object>
+        </child>
+
+        <!-- Enable Drag to Reposition Candidate Box -->
+        <child>
+          <object class="AdwComboRow" id="use_candidate_reposition_row">
+            <property name="title" translatable="yes">Enable Drag to Reposition Candidate Box</property>
+            <property name="subtitle" translatable="yes">Enable or disable drag to reposition candidate box</property>
+            <property name="model">
+              <object class="GtkStringList">
+                <items>
+                  <item translatable="yes">Enable</item>
+                  <item translatable="yes">Disable</item>
+                </items>
+              </object>
+            </property>
+            <property name="selected">0</property>
+          </object>
+        </child>
+
+        <!-- Candidate Box Page Buttons -->
+        <child>
+          <object class="AdwComboRow" id="use_candidate_buttons_row">
+            <property name="title" translatable="yes">Candidate Box Page Buttons</property>
+            <property name="subtitle" translatable="yes">Enable or disable candidate box page buttons</property>
+            <property name="model">
+              <object class="GtkStringList">
+                <items>
+                  <item translatable="yes">On</item>
+                  <item translatable="yes">Off</item>
+                  <item translatable="yes">Keep</item>
+                </items>
+              </object>
+            </property>
+            <property name="selected">0</property>
+          </object>
+        </child>
+
+      </object>
+    </child>
+  </object>
+</interface>

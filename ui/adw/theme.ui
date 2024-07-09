@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <object class="AdwPreferencesPage" id="theme">
+    <property name="name">theme</property>
+    <property name="title" translatable="yes">Theme</property>
+    <property name="icon-name">applications-graphics-symbolic</property>
+
+    <child>
+      <object class="AdwPreferencesGroup" id="theme_group">
+        <property name="title" translatable="yes">Theme Settings</property>
+
+        <!-- Custom IME Light Theme -->
+        <child>
+          <object class="AdwPreferencesRow" id="custom-theme_row">
+            <child>
+              <object class="GtkBox">
+                <property name="orientation">horizontal</property>
+                <property name="spacing">10</property>
+                <child>
+                  <object class="GtkCheckButton" id="custom_ime_light_theme_check">
+                    <property name="halign">start</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkLabel">
+                    <property name="label" translatable="yes">Custom IME light theme</property>
+                    <property name="halign">start</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkComboBoxText" id="custom_ime_light_theme_combo">
+                    <items>
+                      <item translatable="yes">(None)</item>
+                      <!-- Add additional theme options here -->
+                    </items>
+                    <property name="sensitive">false</property>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+
+        <!-- Custom IME Dark Theme -->
+        <child>
+          <object class="AdwPreferencesRow" id="custom-theme-dark_row">
+            <child>
+              <object class="GtkBox">
+                <property name="orientation">horizontal</property>
+                <property name="spacing">10</property>
+                <child>
+                  <object class="GtkCheckButton" id="custom_ime_dark_theme_check">
+                    <property name="halign">start</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkLabel">
+                    <property name="label" translatable="yes">Custom IME dark theme</property>
+                    <property name="halign">start</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkComboBoxText" id="custom_ime_dark_theme_combo">
+                    <items>
+                      <item translatable="yes">(None)</item>
+                      <!-- Add additional theme options here -->
+                    </items>
+                    <property name="sensitive">false</property>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+
+      </object>
+    </child>
+  </object>
+</interface>
+
+
+
+
+
